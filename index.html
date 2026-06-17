@@ -3,22 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TypeScript Canvas Game</title>
+    <meta name="description" content="A TypeScript roll-and-keep dice roller for Legend of the Five Rings." />
+    <title>L5R Roll & Keep</title>
   </head>
   <body>
-    <main class="game-shell">
-      <section class="hud" aria-label="Game stats">
-        <div>
-          <span>Score</span>
-          <strong id="score">0</strong>
-        </div>
-        <div>
-          <span>Status</span>
-          <strong id="status">Playing</strong>
-        </div>
-      </section>
-      <canvas id="game" width="800" height="480" aria-label="TypeScript dodge game"></canvas>
-    </main>
+    <main id="app"></main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

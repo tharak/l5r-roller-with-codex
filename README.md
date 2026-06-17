@@ -1,54 +1,41 @@
-# Gantos
+# L5R Roller with Codex
 
-A tiny browser game built with TypeScript and the HTML Canvas API.
+A TypeScript + Vite web version of the Legend of the Five Rings roll-and-keep dice roller.
 
-## What You Will Learn
+## Features
 
-- Drawing shapes on a canvas
-- Reading keyboard input
-- Running a game loop with `requestAnimationFrame`
-- Updating player and enemy positions
-- Detecting collisions
-- Tracking score and game-over state
+- Roll `XkY` dice pools with bonus modifiers.
+- Apply the L5R ten dice rule from the Swift roller package.
+- Toggle keep-high or keep-low results.
+- Configure exploding dice for none, 10, or 9 and 10.
+- Optionally re-roll initial 1s.
+- Keep a local browser history of recent rolls.
 
-## Run It
+## Reference Projects
 
-Install dependencies:
+This version was built from the behavior and UI ideas in:
+
+- <https://github.com/tharak/LegendOfTheFiveRingsRoller>
+- <https://github.com/tharak/LegendOfTheFiveRingsApp>
+- <https://github.com/tharak/LegendOfTheFiveRings>
+
+## Run Locally
 
 ```sh
 npm install
-```
-
-Start the dev server:
-
-```sh
 npm run dev
 ```
 
-Then open the local URL printed by Vite.
+## Build
 
-## Controls
-
-- Arrow keys or WASD: move
-- Space: restart after game over
-
-## Project Structure
-
-- `index.html`: page shell and canvas
-- `src/main.ts`: game code
-- `src/styles.css`: layout and visual styling
-- `tsconfig.json`: TypeScript settings
-- `package.json`: scripts and dev dependencies
+```sh
+npm run build
+```
 
 ## Deploy on GitHub Pages
 
-This project includes `.github/workflows/deploy.yml`, which builds and deploys
-the game whenever you push to `main`.
+The repository includes a GitHub Actions workflow that builds the app and publishes `dist/` to `gh-pages` when `main` is pushed.
 
-Before the first deployment, open the repository on GitHub and go to:
+After enabling Pages for the repository, use the `gh-pages` branch as the source. The app will be available at:
 
-`Settings -> Pages -> Build and deployment -> Source -> GitHub Actions`
-
-After the workflow finishes, the game will be available at:
-
-`https://<your-github-username>.github.io/gantos/`
+`https://tharak.github.io/l5r-roller-with-codex/`
